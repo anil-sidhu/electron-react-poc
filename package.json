@@ -29,6 +29,9 @@
       "publish": {
         "provider": "github"
       }
+    },
+    "mac": {
+      "target": ["dmg", "zip"]
     }
   },
   "scripts": {
