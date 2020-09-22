@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <HeaderContainer />
-     
+     <button onClick={()=>alert("some data")} >Click</button>
       <HomeContainer />
     </div>
   );

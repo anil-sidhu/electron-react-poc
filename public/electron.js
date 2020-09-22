@@ -1,5 +1,6 @@
 const electron = require("electron");
 const app = electron.app;
+const Menu= electron.Menu
 const BrowserWindow = electron.BrowserWindow;
 const path = require("path");
 const isDev = require("electron-is-dev");
@@ -15,12 +16,19 @@ console.warn("some ",`file://${path.join(__dirname, "../build/index.html")}`)
 
     mainWindow.loadURL(
         isDev
-        ? "http://localhost:3000"
-        : `http://localhost:3000`
+        ? `file://${path.join(__dirname, "../build/index.html")}`
+        :`file://${path.join(__dirname, "../build/index.html")}`
     );
     mainWindow.on("closed", () => (mainWindow = null));
 }
-
+ 
+// const menu = Menu.buildFromTemplate([{
+//     label: 'File',
+//     submenu: [
+//        { role: 'quit' }
+//     ]
+//   },])
+// Menu.setApplicationMenu(menu)
 app.on("ready", createWindow);
 app.on("window-all-closed", () => {
     if (process.platform !== "darwin") {
