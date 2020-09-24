@@ -25,10 +25,10 @@ const dataFunction=()=>{
   return (
     <div className="App">
       <HeaderContainer />
-     <button onClick={()=>dataFunction()} >Click1</button>
+     <button onClick={()=>dataFunction()} >Click for notification</button>
       <HomeContainer />
     </div>
   );
 };
-
+ 
 export default App;

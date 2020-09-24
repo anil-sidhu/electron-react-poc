@@ -17,12 +17,18 @@
     "react-redux": "^7.2.1"
   },
   "build": {
-    "appId": "com.example.exampleapp",
-    "compression": "normal",
-    "productName": "Example",
+    "appId": "com.proto.knox",
+    "compression": "maximum",
+    "productName": "Knox Proto",
     "directories": {
       "buildResources": "build",
       "output": "dist"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "license": "LICENSE.txt"
     },
     "win": {
       "target": "nsis",

@@ -56,7 +56,7 @@ notification.on('click', (event, arg)=>{
     mainWindow.focus()
 })
 },1000)
-  })
+  }) 
 // 
 app.on("ready", createWindow);
 app.on("window-all-closed", () => {
